@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types' //Manejo de properties
 
 const CounterApp = ({
     value,
 }) => {
+    
+
+    const [counter, setCounter] = useState(value);
 
     const handleAdd = (e) => {
-        console.log(e);
-    }
+        setCounter(counter + 1 );
+    };
+
+    const handleSubtract = ()=>{
+        setCounter(counter - 1);
+    };
+
+    const handleReset = ()=>{
+        setCounter(value);
+    };
 
     return(
         <>
             <h1>CounterApp</h1>
-            <p> {value} </p>
+            <p> {counter} </p>
             <button onClick={ handleAdd }> +1 </button>
+            <button onClick={ handleReset }> Reset </button>
+            <button onClick={ handleSubtract }> -1 </button>
         </>
     );
 
