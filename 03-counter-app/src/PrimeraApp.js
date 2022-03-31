@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types' //Obigar parametros
 
 
-const PrimeraApp = ({ saludo, subtitulo }) => {
+export const PrimeraApp = ({ saludo, subtitulo }) => {
 
     //const saludar = "Hola Mundo";
 
