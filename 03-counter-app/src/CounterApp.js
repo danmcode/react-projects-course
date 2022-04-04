@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types' //Manejo de properties
 
 const CounterApp = ({
-    value,
+    value = 0,
 }) => {
     
 

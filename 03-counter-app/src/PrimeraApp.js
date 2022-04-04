@@ -10,7 +10,7 @@ export const PrimeraApp = ({ saludo, subtitulo }) => {
         <>
             <h1> { saludo } </h1>
             {/* <h1>  <pre> {JSON.stringify( { nombre: 'Daniel'}, null, 3 )} </pre> </h1> */}
-            <p> {subtitulo} </p>
+            <p>{subtitulo}</p>
         </>
     );
 };
