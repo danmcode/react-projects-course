@@ -11,8 +11,6 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(
         [
             'One Punch',
-            'Samuurai X',
-            'Dragon Ball',
         ]
     );
 

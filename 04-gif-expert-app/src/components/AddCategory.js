@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { setCategories } from '../GifExpertApp';
+import PropTypes from 'prop-types'
 //rafc
 export const AddCategory = ({ setCategories }) => {
     
-    const [inputValue, setInputValue] = useState('Hola Mundo');
+    const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = ( e ) => {
         setInputValue(e.target.value);
@@ -11,7 +11,10 @@ export const AddCategory = ({ setCategories }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setCategories( cats => [...cats, inputValue] );
+        if(inputValue.trim().length > 2){
+            setCategories( cats => [...cats, inputValue] );
+            setInputValue('');
+        }
     }
 
   return (
@@ -23,6 +26,11 @@ export const AddCategory = ({ setCategories }) => {
         />
     </form>
   )
-}
+};
+
+
+AddCategory.propTypes = {
+    setCategories: PropTypes.func.isRequired,
+};
 
 
